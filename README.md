@@ -32,7 +32,7 @@ subnet_backend | Network range of the backend subnet (e.g. 172.16.137.0/24)
 
 ## Launching the Template
 
-Terraform requires Azure Credentials to deploy to the correct subscription. Terraform recommends ![using a Service Principal when running in a Shared Environment](https://www.terraform.io/docs/providers/azurerm/authenticating_via_service_principal.html) (such as within a CI server/automation) - and [authenticating via the Azure CLI](https://www.terraform.io/docs/providers/azurerm/authenticating_via_azure_cli.html) when you're running Terraform locally using the Azure Cloud Shell.
+Terraform requires Azure Credentials to deploy to the correct subscription. Terraform recommends [using a Service Principal when running in a Shared Environment](https://www.terraform.io/docs/providers/azurerm/authenticating_via_service_principal.html) (such as within a CI server/automation) - and [authenticating via the Azure CLI](https://www.terraform.io/docs/providers/azurerm/authenticating_via_azure_cli.html) when you're running Terraform locally using the Azure Cloud Shell.
 
 Credentials to be installed in the NGF or to access Azure can be stored in a secrets.tfvars file with the following format:
 
