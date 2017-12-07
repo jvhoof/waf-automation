@@ -38,13 +38,13 @@ Terraform requires Azure Credentials to deploy to the correct subscription. Terr
 
 Credentials to be installed in the NGF or to access Azure can be stored in a secrets.tfvars file with the following format:
 
-`
+```
 password        = ""
 subscription_id = ""
 client_id       = ""
 client_secret   = ""
 tenant_id       = ""
-`
+```
 
 Alternatively these credentials can be provided using when launching terraform as ![an argument](https://www.terraform.io/intro/getting-started/variables.html) or ![via environment variables](https://www.terraform.io/intro/getting-started/variables.html).
 
