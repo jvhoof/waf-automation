@@ -15,6 +15,7 @@ The solution does a check of the template when you use the provide scripts. It d
 ## Deployed resources
 Following resources will be created by the template:
 - One Azure VNET with 2 subnets (for the WAF and backend servers, additional subnets can be configured afterwards in the terraform template)
+- External Azure Load Balancer with a static public IP and rules for 80, 443 and management of both WAF units
 - Two Virtual machine with a network interface and public IP
 
 **Note** The backend resources are *not* automatically created by the template. This has to be done manually after template deployment has finished or by adapting the Terraform template.
@@ -37,11 +38,13 @@ Terraform requires Azure Credentials to deploy to the correct subscription. Terr
 
 Credentials to be installed in the NGF or to access Azure can be stored in a secrets.tfvars file with the following format:
 
+`
 password        = ""
 subscription_id = ""
 client_id       = ""
 client_secret   = ""
 tenant_id       = ""
+`
 
 Alternatively these credentials can be provided using when launching terraform as ![an argument](https://www.terraform.io/intro/getting-started/variables.html) or ![via environment variables](https://www.terraform.io/intro/getting-started/variables.html).
 
